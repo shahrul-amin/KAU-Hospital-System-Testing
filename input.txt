@@ -1,0 +1,90 @@
+10 20 15
+
+Add_Room 199 First B 700.0
+Add_Room 102 First B 700.0
+Add_Room 103 First B 700.0
+Add_Room 004 Ground A 800.0
+Add_Room 005 Ground A 800.0
+Add_Room 206 Second C 600.0
+Add_Room 007 Ground C 600.0
+Add_Room 208 Second C 600.0
+Add_Room 209 Second C 600.0
+Add_Room 210 Second C 600.0
+
+Add_Medicine 4001 Azithromycin 75.0
+Add_Medicine 4002 Amoxicillin 85.0
+Add_Medicine 4003 Hydrochlorothiazide 95.0
+Add_Medicine 4004 Lisinopril 45.0
+Add_Medicine 4005 Hydrocodone 65.0
+Add_Medicine 4006 Crestor 110.0
+Add_Medicine 4007 Epogen 445.0
+Add_Medicine 4008 Lipitor 675.0
+Add_Medicine 4009 Nexium 245.0
+Add_Medicine 4010 Plavix 145.0
+Add_Medicine 4011 Singulair 125.0
+Add_Medicine 4012 Abilify 75.0
+Add_Medicine 4013 Actos 250.0
+Add_Medicine 4014 Actosz 250.0
+Add_Medicine 4015 Actosx 50.0
+Add_Medicine 4016 Lipitorq 40.0
+Add_Medicine 4017 Amoxicillina 90.0
+Add_Medicine 4018 Crestora 85.0
+Add_Medicine 4019 Panadol 20.0
+Add_Medicine 4020 Panadol_Extra 25.0
+		
+Add_Doctor 450.0 Cardiologist 10005 Mohammed_Ali_Zahrani Saudi M 0132556825
+Add_Doctor 500.0 Surgery 10004 Sara_Ahmed_Ghamdi Saudi F 0132556825
+Add_Doctor 500.0 Surgery 10003 Maryam_Hassan_Shahri Saudi F 0132556825
+Add_Doctor 300.0 Dermatologist 10002 Hassan_Ahmad_Sami Saudi M 0132556825
+Add_Doctor 250.0 Family_medicine 10001 Mohammed_Ahmed_Zahrani Saudi M 0132556825
+
+Add_Nurse 10 Ventilator_care 90001 Faisal_Zahrani Saudi M 0132556825
+Add_Nurse 8 Telemetry 90002 Fatima_Ahmed Saudi F 0132556825
+Add_Nurse 7 ICU_and_CCU 90003 Laila_Shahri Saudi F 0132556825
+   
+Add_Patient Suffering_from_High_Blood_Sugar O+  20005 Meshal_Ali Saudi M 0132556825 3 
+Add_Patient Suffering_from_cough_and_cold O-  20006 Fatima_Mohammed Saudi F 0132556825 2 
+Add_Patient Suffering_from_chest_pain A+ 20007 Bahaa_Mahmood Saudi M 0132556825 3       
+Add_Patient Suffering_from_High_Blood_Sugar O+  20001 Meshal_ALi Saudi M 0132556825 3 
+Add_Patient Suffering_from_cough_and_cold O-  20002 Fatima_Mohammed Saudi F 0132556825 2 
+Add_Patient Suffering_from_chest_pain A+ 20003 Bahaa_Mahmood Saudi M 0132556825 3 
+Add_Patient Patient_has_leg_injury A- 20004 Hana_Abdukkah Saudi F 0132556825 2 
+
+Assign_Doctor_Patient 10005 20001
+Assign_Doctor_Patient 10005 20002
+Assign_Doctor_Patient 10001 20003
+Assign_Doctor_Patient 10003 20004
+Assign_Doctor_Patient 10002 20005
+Assign_Doctor_Patient 10005 20006
+Assign_Doctor_Patient 10004 20007
+Assign_Doctor_Patient 10007 20001
+Assign_Doctor_Patient 10005 20009
+
+
+Assign_Room_Patient 199 20001
+Assign_Room_Patient 102 20002
+Assign_Room_Patient 103 20003
+Assign_Room_Patient 004 20004
+Assign_Room_Patient 005 20005
+Assign_Room_Patient 206 20006
+Assign_Room_Patient 007 20007
+Assign_Room_Patient 208 20008
+Assign_Room_Patient 211 20006
+Assign_Room_Patient 210 20005
+
+
+Assign_Medicine_Patient 20001 3 4001 4004 4005
+Assign_Medicine_Patient 20002 2 4005 4006
+Assign_Medicine_Patient 20003 3 4006 4007 4030
+Assign_Medicine_Patient 20003 3 4006 4007 4009
+Assign_Medicine_Patient 20004 4 4009 4011 4005 4016
+Assign_Medicine_Patient 20004 2 4009 4021
+Assign_Medicine_Patient 20004 2 4009 4011
+Assign_Medicine_Patient 20005 3 4001 4004 4005 
+Assign_Medicine_Patient 20006 2 4014 4015 
+Assign_Medicine_Patient 20007 3 4011 4004 4006
+Assign_Medicine_Patient 20008 2 4001 4007
+
+Print_Bill
+
+Quit
