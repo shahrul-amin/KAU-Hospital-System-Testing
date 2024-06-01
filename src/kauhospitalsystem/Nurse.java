@@ -1,12 +1,12 @@
 
 package kauhospitalsystem;
 
-public class Nurse extends Staff {
+public class Nurse extends Person {
     
    private int experience; 
 
-    public Nurse(int experience, String specialization, int id, String name, String nationality, char gender, String phone) {       
-        super(specialization, id, name, nationality, gender, phone);
+    public Nurse(int experience, int id, String name, char gender) {       
+        super(id, name, gender);
         this.experience = experience;
     }
     

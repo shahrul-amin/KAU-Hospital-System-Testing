@@ -72,7 +72,7 @@ public class Medicine {
     // Validation methods
     private boolean isValidMedicineCode(int medicineCode) {
         String codeStr = String.valueOf(medicineCode);
-        return Pattern.matches("4[0-9]{3}", codeStr) && medicineCode >= 4001 && medicineCode <= 4514;
+        return Pattern.matches("4[0-9]{3}", codeStr) && medicineCode >= 4000 && medicineCode <= 4514;
     }
     
     private boolean isValidName(String name) {

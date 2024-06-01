@@ -3,12 +3,12 @@ package kauhospitalsystem;
 import java.text.DecimalFormat;
 import java.util.regex.Pattern;
 
-public class Doctor extends Staff {
+public class Doctor extends Person {
     
  private double consultationFees; 
 
-    public Doctor(double consultationFees, String specialization, int id, String name, String nationality, char gender, String phone) {
-        super(specialization, id, name, nationality, gender, phone);
+    public Doctor(double consultationFees, int id, String name, char gender) {
+        super(id, name, gender);
         this.consultationFees = consultationFees;
         
     }

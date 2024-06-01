@@ -10,9 +10,9 @@ public class Patient extends Person {
     private Room room;
     private final int totalMedicine;
     
-    public Patient(String illness, String bloodGroup, int id, String name, String nationlity, char gender, String phone, int totalMedicine ) {
+    public Patient(String illness, String bloodGroup, int id, String name, char gender, int totalMedicine ) {
         
-        super(id, name, nationlity, gender, phone);
+        super(id, name, gender);
         this.illness = illness;
         this.bloodGroup = bloodGroup;
         this.totalMedicine = totalMedicine;
@@ -39,7 +39,7 @@ public class Patient extends Person {
         return doctor;
     }
     
-    public Medicine getMedicine (int index){
+    public Medicine getMedicine(int index){
         
         return medicine[index];
     }

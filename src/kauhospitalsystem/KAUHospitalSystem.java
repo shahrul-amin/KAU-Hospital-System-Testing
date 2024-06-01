@@ -11,15 +11,12 @@ public class KAUHospitalSystem {
 
         //Read values from file
         double consultationFees = input.nextDouble();
-        String specialization = input.next();
         int id = input.nextInt();
         String name = input.next();
-        String nationality = input.next();
         char gender = input.next().charAt(0);
-        String phone = input.next();
         
         // Create Doctor object and assgining values
-        Doctor doctor = new Doctor(consultationFees, specialization, id, name, nationality, gender, phone);
+        Doctor doctor = new Doctor(consultationFees, id, name, gender);
 
         // return Doctor Object
         return doctor;
@@ -29,14 +26,11 @@ public class KAUHospitalSystem {
     private static Nurse getNurse(Scanner input) {
 
         int experience = input.nextInt();
-        String specialization = input.next();
         int id = input.nextInt();
         String name = input.next();
-        String nationality = input.next();
         char gender = input.next().charAt(0);
-        String phone = input.next();
 
-        Nurse nurse = new Nurse(experience, specialization, id, name, nationality, gender, phone);
+        Nurse nurse = new Nurse(experience, id, name, gender);
 
         return nurse;
     }
@@ -74,12 +68,10 @@ public class KAUHospitalSystem {
         String bloodGroup = input.next();
         int id = input.nextInt();
         String name = input.next();
-        String nationality = input.next();
         char gender = input.next().charAt(0);
-        String phone = input.next();
         int totalMedicine = input.nextInt();
 
-        Patient patient = new Patient(illness, bloodGroup, id, name, nationality, gender, phone, totalMedicine);
+        Patient patient = new Patient(illness, bloodGroup, id, name, gender, totalMedicine);
 
         return patient;
     }
