@@ -3,37 +3,51 @@ package kauhospitalsystem;
 import java.text.DecimalFormat;
 import java.util.regex.Pattern;
 
-public class Doctor extends Person {
+public class Doctor {
     
- private double consultationFees; 
+    private int doctorId;
+    private double consultationFees; 
 
-    public Doctor(double consultationFees, int id, String name, char gender) {
-        super(id, name, gender);
-        this.consultationFees = consultationFees;
-        
+    public Doctor(int doctorId, double consultationFees) {
+        setDoctorId(doctorId);
+        setConsultationFees(consultationFees);
     }
     
-    public double getConsultationFees () {
+    public double getConsultationFees() {
         return consultationFees;
     }
-    
-    public void setConsultationFees (double consultationFees) {
+
+    public int getDoctorId() {
+        return doctorId;
+    }
+
+    public void setConsultationFees(double consultationFees) {
         DecimalFormat df = new DecimalFormat("#.00");
         String formattedFees = df.format(consultationFees);
         
-        // Reject charges with letters or more than three decimal places
+        // Reject charges with letters or more than two decimal places
         if (!Pattern.matches("\\d+(\\.\\d{1,2})?", formattedFees)) {
-            System.out.println("Error: Invalid price format.");
-            return;
+            throw new IllegalArgumentException("Error: Invalid price format.");
         }
-        this.consultationFees = Double.parseDouble(formattedFees);
+        double fees = Double.parseDouble(formattedFees);
+        if (fees < 50.0 || fees > 99.0) {
+            throw new IllegalArgumentException("Error: Consultation fees must be between RM 50.0 and RM 99.0.");
+        }
+        this.consultationFees = fees;
     }
     
-    public String toString () {
+    public void setDoctorId(int doctorId) {
+        if (doctorId >= 5000 && doctorId <= 7999) {
+            this.doctorId = doctorId;
+        } else {
+            throw new IllegalArgumentException("Error: Doctor ID must be between 5000 and 7999.");
+        }
+    }
+    
+    @Override
+    public String toString() {
         DecimalFormat df = new DecimalFormat("#.00");
         String formattedFees = df.format(getConsultationFees());
-        return super.toString() + "\n\tConsultation Fees: RM " + formattedFees;
-        
+        return "Doctor ID: " + getDoctorId() + "\n\tConsultation Fees: RM " + formattedFees;
     }
 }
-

@@ -1,29 +1,43 @@
-
 package kauhospitalsystem;
 
-public class Nurse extends Person {
+public class Nurse {
     
-   private int experience; 
+    private int experience;
+    private int nurseId; 
 
-    public Nurse(int experience, int id, String name, char gender) {       
-        super(id, name, gender);
-        this.experience = experience;
+    public Nurse(int nurseId, int experience) {
+        setNurseId(nurseId);
+        setExperience(experience);
     }
     
-    public int getExperience (){
+    // Getters
+    public int getExperience() {
         return experience;
     }
     
+    public int getNurseId() {
+        return nurseId;
+    }
+    
+    // Setters
     public void setExperience(int experience) {
-        if (experience > 0 && experience <= 40) {
+        if (experience >= 0 && experience <= 40) {
             this.experience = experience;
         } else {
-            System.out.println("Error: Experience must be a positive integer and cannot exceed 40 years.");
+            throw new IllegalArgumentException("Error: Experience must be between 0 and 40 years.");
         }
-    }    
+    }
     
-    public String toString (){
-        return super.toString() + "\n\tExperience Year: " + getExperience();
+    public void setNurseId(int nurseId) {
+        if (nurseId >= 8000 && nurseId <= 9999) {
+            this.nurseId = nurseId;
+        } else {
+            throw new IllegalArgumentException("Error: Nurse ID must be between 8000 and 9999.");
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return "Nurse ID: " + getNurseId() + "\n\tExperience Year: " + getExperience();
     }
 }
-
