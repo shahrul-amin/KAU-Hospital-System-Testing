@@ -15,6 +15,7 @@ public class KAUHospitalSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
+            System.out.println("");
             System.out.println("KAU Hospital System Menu");
             System.out.println("1. Add Room");
             System.out.println("2. Add Doctor");
@@ -74,10 +75,10 @@ public class KAUHospitalSystem {
         try {
             System.out.print("Enter doctor ID (5000-7999): ");
             int doctorId = scanner.nextInt();
-            System.out.print("Enter consultation fees (50.0-99.0): ");
-            double consultationFees = scanner.nextDouble();
             scanner.nextLine(); // Consume newline
-            Doctor doctor = new Doctor(doctorId, consultationFees);
+            System.out.print("Enter gender (M/F): ");
+            char gender = scanner.nextLine().charAt(0);
+            Doctor doctor = new Doctor(doctorId, gender);
             doctors.add(doctor);
             System.out.println("Doctor added successfully.");
         } catch (IllegalArgumentException e) {
@@ -89,10 +90,10 @@ public class KAUHospitalSystem {
         try {
             System.out.print("Enter nurse ID (8000-9999): ");
             int nurseId = scanner.nextInt();
-            System.out.print("Enter experience (0-40 years): ");
-            int experience = scanner.nextInt();
             scanner.nextLine(); // Consume newline
-            Nurse nurse = new Nurse(experience, nurseId);
+            System.out.print("Enter gender (M/F): ");
+            char gender = scanner.nextLine().charAt(0);
+            Nurse nurse = new Nurse(nurseId, gender);
             nurses.add(nurse);
             System.out.println("Nurse added successfully.");
         } catch (IllegalArgumentException e) {
@@ -134,26 +135,31 @@ public class KAUHospitalSystem {
         System.out.println("\nRooms:");
         for (Room room : rooms) {
             System.out.println(room);
+            System.out.println();
         }
 
         System.out.println("\nDoctors:");
         for (Doctor doctor : doctors) {
             System.out.println(doctor);
+            System.out.println();
         }
 
         System.out.println("\nNurses:");
         for (Nurse nurse : nurses) {
             System.out.println(nurse);
+            System.out.println();
         }
 
         System.out.println("\nPatients:");
         for (Patient patient : patients) {
             System.out.println(patient);
+            System.out.println();
         }
 
         System.out.println("\nMedicines:");
         for (Medicine medicine : medicines) {
             System.out.println(medicine);
+            System.out.println();
         }
     }
 }

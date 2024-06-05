@@ -2,32 +2,24 @@ package kauhospitalsystem;
 
 public class Nurse {
     
-    private int experience;
-    private int nurseId; 
+    private int nurseId;
+    private char gender; 
 
-    public Nurse(int nurseId, int experience) {
+    public Nurse(int nurseId, char gender) {
         setNurseId(nurseId);
-        setExperience(experience);
+        setGender(gender);
     }
     
     // Getters
-    public int getExperience() {
-        return experience;
-    }
-    
     public int getNurseId() {
         return nurseId;
     }
     
-    // Setters
-    public void setExperience(int experience) {
-        if (experience >= 0 && experience <= 40) {
-            this.experience = experience;
-        } else {
-            throw new IllegalArgumentException("Error: Experience must be between 0 and 40 years.");
-        }
+    public char getGender() {
+        return gender;
     }
     
+    // Setters
     public void setNurseId(int nurseId) {
         if (nurseId >= 8000 && nurseId <= 9999) {
             this.nurseId = nurseId;
@@ -36,8 +28,16 @@ public class Nurse {
         }
     }
     
+    public void setGender(char gender) {
+        if (gender == 'M' || gender == 'F') {
+            this.gender = gender;
+        } else {
+            throw new IllegalArgumentException("Error: Gender must be 'M' or 'F'.");
+        }
+    }
+    
     @Override
     public String toString() {
-        return "Nurse ID: " + getNurseId() + "\n\tExperience Year: " + getExperience();
+        return "\tNurse ID: " + getNurseId() + "\n\tGender: " + getGender();
     }
 }

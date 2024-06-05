@@ -38,6 +38,6 @@ public class Patient {
 
     @Override
     public String toString() {
-        return "Patient ID: " + getPatientId() + "\nIllness: " + getIllness();
+        return "\tPatient ID: " + getPatientId() + "\nIllness: " + getIllness();
     }
 }
