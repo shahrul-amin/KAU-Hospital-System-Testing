@@ -32,7 +32,7 @@ public class Patient {
         if (patientId >= 1000 && patientId <= 3999) {
             this.patientId = patientId;
         } else {
-            throw new IllegalArgumentException("Invalid patient ID.");
+            throw new IllegalArgumentException("Invalid patient ID");
         }
     }
 
