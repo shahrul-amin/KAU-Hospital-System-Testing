@@ -24,7 +24,7 @@ public class Patient {
         if (illness != null && !illness.trim().isEmpty()) {
             this.illness = illness;
         } else {
-            throw new IllegalArgumentException("Error: Illness cannot be empty.");
+            throw new IllegalArgumentException("Illness cannot be empty");
         }
     }
 
@@ -32,7 +32,7 @@ public class Patient {
         if (patientId >= 1000 && patientId <= 3999) {
             this.patientId = patientId;
         } else {
-            throw new IllegalArgumentException("Error: Invalid patient ID.");
+            throw new IllegalArgumentException("Invalid patient ID.");
         }
     }
 

@@ -22,7 +22,7 @@ public class Doctor {
         if (doctorId >= 5000 && doctorId <= 7999) {
             this.doctorId = doctorId;
         } else {
-            throw new IllegalArgumentException("Error: Doctor ID must be between 5000 and 7999.");
+            throw new IllegalArgumentException("Invalid doctor ID");
         }
     }
 
@@ -30,7 +30,7 @@ public class Doctor {
         if (gender == 'M' || gender == 'F') {
             this.gender = gender;
         } else {
-            throw new IllegalArgumentException("Error: Gender must be 'M' or 'F'.");
+            throw new IllegalArgumentException("Invalid gender");
         }
     }
     

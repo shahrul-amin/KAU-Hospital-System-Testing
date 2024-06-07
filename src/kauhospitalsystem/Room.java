@@ -38,7 +38,7 @@ public class Room {
         if (roomNo >= 1 && roomNo <= 399) {
             this.roomNo = roomNo;
         } else {
-            throw new IllegalArgumentException("Error: Invalid room number.");
+            throw new IllegalArgumentException("Invalid room number");
         }
     }
     
@@ -46,7 +46,7 @@ public class Room {
         if (charges >= 100 && charges <= 2000) {
             this.charges = charges;
         } else {
-            throw new IllegalArgumentException("Error: Charges must be between RM 100 and RM 2000.");
+            throw new IllegalArgumentException("Invalid charges");
         }
     }
     

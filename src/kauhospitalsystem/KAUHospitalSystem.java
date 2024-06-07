@@ -65,7 +65,7 @@ public class KAUHospitalSystem {
             scanner.nextLine(); // Consume newline
             Room room = new Room(roomNo, charges);
             rooms.add(room);
-            System.out.println("Room added successfully.");
+            System.out.println("Room successfully added");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -80,7 +80,7 @@ public class KAUHospitalSystem {
             char gender = scanner.nextLine().charAt(0);
             Doctor doctor = new Doctor(doctorId, gender);
             doctors.add(doctor);
-            System.out.println("Doctor added successfully.");
+            System.out.println("Doctor successfully added");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -95,7 +95,7 @@ public class KAUHospitalSystem {
             char gender = scanner.nextLine().charAt(0);
             Nurse nurse = new Nurse(nurseId, gender);
             nurses.add(nurse);
-            System.out.println("Nurse added successfully.");
+            System.out.println("Nurse successfully added");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -110,7 +110,7 @@ public class KAUHospitalSystem {
             String illness = scanner.nextLine();
             Patient patient = new Patient(patientId, illness);
             patients.add(patient);
-            System.out.println("Patient added successfully.");
+            System.out.println("Patient successfully added");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
@@ -125,7 +125,7 @@ public class KAUHospitalSystem {
             scanner.nextLine(); // Consume newline
             Medicine medicine = new Medicine(medicineCode, price);
             medicines.add(medicine);
-            System.out.println("Medicine added successfully.");
+            System.out.println("Medicine successfully added");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

@@ -27,7 +27,7 @@ public class Medicine {
         if (medicineCode >= 4000 && medicineCode <= 4514) {
             this.medicineCode = medicineCode;
         } else {
-            throw new IllegalArgumentException("Error: Medicine code must be between 4000 and 4514.");
+            throw new IllegalArgumentException("Invalid medicine code");
         }
     }
     
@@ -37,7 +37,7 @@ public class Medicine {
         
         // Reject charges with letters or more than two decimal places
         if (!Pattern.matches("\\d+(\\.\\d{1,2})?", formattedPrice)) {
-            throw new IllegalArgumentException("Error: Invalid price format.");
+            throw new IllegalArgumentException("Invalid price");
         }
 
         double parsedPrice = Double.parseDouble(formattedPrice);

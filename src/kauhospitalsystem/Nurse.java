@@ -24,7 +24,7 @@ public class Nurse {
         if (nurseId >= 8000 && nurseId <= 9999) {
             this.nurseId = nurseId;
         } else {
-            throw new IllegalArgumentException("Error: Nurse ID must be between 8000 and 9999.");
+            throw new IllegalArgumentException("Invalid nurse ID");
         }
     }
     
@@ -32,7 +32,7 @@ public class Nurse {
         if (gender == 'M' || gender == 'F') {
             this.gender = gender;
         } else {
-            throw new IllegalArgumentException("Error: Gender must be 'M' or 'F'.");
+            throw new IllegalArgumentException("Invalid gender");
         }
     }
     
