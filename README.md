@@ -1,6 +1,10 @@
 # KAUHospitalSystem
 
-KAUHospitalSystem is a simple Java console application designed to manage a hospital system. It allows the user to add and display information about rooms, doctors, nurses, patients, and medicines.
+KAUHospitalSystem is simulation software designed to simulate hospital functionality. It allows the registration of rooms, doctors, nurses, and patients in the system. The system allocates rooms, doctors, and medicines to patients, and generates billing reports for each patient. The original version of the system reads all data from a given input file (`input.txt`) and generates results and reports in an output file (`Output.txt`).
+
+## Project Changes for Testing Purposes
+
+For the purpose of testing, the system has been modified to include menu features. This allows for interactive testing and debugging of various functionalities through a console menu interface. The testing version provides the following menu:
 
 ## Features
 
