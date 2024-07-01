@@ -90,6 +90,18 @@ The project includes test classes for each of the add methods to ensure proper f
 
 Make sure to compile and run these tests to verify the correctness of the system.
 
+## Documentation
+
+The project includes detailed documentation for the system. You can find the following documents in the `Documentation` directory:
+
+- KAU Hospital System Requirement Documentation
+- Test Plan Documentation
+- Test Design Specification
+- Test Case Specification
+- Test Procedure Specification
+- Test Log
+- Test Summary Report
+
 ## Reference
 
 rahmaAlghalib. (2022, Aug 8). GitHub - rahmaAlghalib/KAU-Hospital-System: Java Hospital management system. GitHub. [https://github.com/rahmaAlghalib/KAU-Hospital-System](https://github.com/rahmaAlghalib/KAU-Hospital-System)
